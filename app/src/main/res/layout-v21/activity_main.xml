@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.igor.whowantwillbemillioner.MainActivity"
+    android:background="@drawable/theme3">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:clipToPadding="false">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:id="@+id/txt1"
+                android:gravity="center"
+                android:textSize="50sp"
+                android:text="@string/need"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/corner"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:baselineAligned="true">
+
+
+
+            <LinearLayout
+                android:id="@+id/buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp">
+
+
+                <Button
+                    android:elevation="20dp"
+                    android:onClick="onStartClick"
+                    android:id="@+id/btn1"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/corners"
+                    android:text="@string/ans" />
+
+                <Button
+                    android:elevation="20dp"
+                    android:onClick="onStartClick"
+                    android:id="@+id/btn2"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/corners"
+                    android:text="@string/ans2" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/buttons2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <Button
+                    android:elevation="20dp"
+                    android:onClick="onStartClick"
+                    android:id="@+id/btn3"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/corners"
+                    android:text="@string/ans3" />
+                <Button
+                    android:elevation="20dp"
+                    android:onClick="onStartClick"
+                    android:id="@+id/btn4"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/corners"
+                    android:text="@string/ans4"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

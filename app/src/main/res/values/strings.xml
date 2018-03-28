@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Викторина</string>
+    <color name="green">#7ff000</color>
+    <color name="red">#ff0000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#1e90ff</color>
+    <string name="need">Вопрос</string>
+    <string name="ans">Answer1</string>
+    <string name="ans2">Answer2</string>
+    <string name="ans3">Answer3</string>
+    <string name="ans4">Answer4</string>
+    <string name="yra">Вы правильно ответили</string>
+    <string name="next">Следующий</string>
+    <color name="grey">#d3d3d3</color>
+
+</resources>
