@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 
 public class Main2Activity extends AppCompatActivity {
     int ID;
@@ -20,7 +19,7 @@ public class Main2Activity extends AppCompatActivity {
         Animation anim= AnimationUtils.loadAnimation(this,R.anim.myalpha);
         view.startAnimation(anim);
         if(ID<=6) {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, QuestionActivity.class);
             intent.putExtra("id", ID+1);
             startActivity(intent);
             finish();

@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.example.igor.whowantwillbemillioner.Entites.Question;
 
-public class MainActivity extends AppCompatActivity {
+public class QuestionActivity extends AppCompatActivity {
  int iD;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
