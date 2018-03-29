@@ -12,7 +12,7 @@ public class Question {
     private int trueAnswer;
 
     private static final ArrayList<Question> questions = new ArrayList<>(Arrays.asList(new Question[] {
-            new Question(0, "Когда родился Иван Грозный?", new String[]{"1234","1345", "1242", "1531"}, 3),
+            new Question(0, "Когда родился Иван Грозный?", new String[]{"1531","1345", "1242", "1234"}, 0),
             new Question(1, "Когда родился Иваныч?", new String[]{"1234", "1531","1345", "1242"}, 1),
             new Question(2, "Сколько пальцев на руке?", new String[]{"4", "1","5", "2"}, 2),
             new Question(3, "Характерные особенности этого стиля стрельчатые арки, огромные окна и витражи", new String[]{"Романский стиль", "Готический стиль","Барокко", "Классицизм"}, 1),

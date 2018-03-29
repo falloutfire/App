@@ -12,5 +12,6 @@
     <string name="yra">Вы правильно ответили</string>
     <string name="next">Следующий</string>
     <color name="grey">#d3d3d3</color>
+    <color name="forTextV">#AFEEEE</color>
 
 </resources>
