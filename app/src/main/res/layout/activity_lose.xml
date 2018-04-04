@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/themeapp"
-    tools:context="com.example.igor.whowantwillbemillioner.TrueActivity">
+    tools:context=".LoseActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="15dp"
                 android:gravity="center"
-                android:text="@string/yra"
+                android:text="@string/lose"
                 android:textSize="30sp" />
 
         </RelativeLayout>
@@ -47,8 +47,8 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/questionrect"
                 android:elevation="20dp"
-                android:onClick="Click"
-                android:text="@string/next" />
+                android:onClick="onClickCloseTour"
+                android:text="@string/backMenu" />
         </LinearLayout>
     </LinearLayout>
 

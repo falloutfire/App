@@ -10,23 +10,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:background="@drawable/themeapp"
-        >
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            >
+            android:layout_weight="1">
 
             <ImageView
+                android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/viktorina"
-                android:id="@+id/imageView"
                 android:layout_centerHorizontal="true"
-                android:layout_margin="50dp"/>
+                android:layout_margin="50dp"
+                android:src="@drawable/viktorina" />
 
         </RelativeLayout>
 
@@ -37,40 +35,36 @@
             android:orientation="horizontal">
 
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <Button
+                    android:id="@+id/startButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:layout_marginEnd="80dp"
                     android:layout_marginStart="80dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:id="@+id/startButton"
-                    android:text="Играть"
                     android:background="@drawable/questionrect"
                     android:onClick="onClickStart"
-                    />
+                    android:text="Играть" />
+
                 <Button
-                    android:layout_marginEnd="80dp"
-                    android:layout_marginStart="80dp"
                     android:id="@+id/exitButton"
-                    android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
+                    android:layout_marginEnd="80dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/questionrect"
                     android:onClick="onClickExit"
                     android:text="Выход" />
 
 
             </LinearLayout>
-
-
-
 
 
         </LinearLayout>

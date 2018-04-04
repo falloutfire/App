@@ -9,8 +9,10 @@
     <string name="ans2">Answer2</string>
     <string name="ans3">Answer3</string>
     <string name="ans4">Answer4</string>
-    <string name="yra">Вы правильно ответили</string>
-    <string name="next">Следующий</string>
+    <string name="yra">Вы ответили правильно!</string>
+    <string name="next">Следующий вопрос</string>
+    <string name="lose">Вы ответили неправильно!</string>
+    <string name="backMenu">Вернутсья в главное меню</string>
     <color name="grey">#d3d3d3</color>
     <color name="forTextV">#AFEEEE</color>
 
