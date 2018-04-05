@@ -39,8 +39,6 @@ public class QuestionActivity extends AppCompatActivity {
         answers.add(2);
         answers.add(3);
         Collections.shuffle(answers);
-        //здесь индексы можно было сделать по порядку все равно все ответы
-        //были бы рандомными и разными, но мне чего-то так захотелось
         Button btn1 = (Button) findViewById(R.id.btn1);
         btn1.setText(Question.getQuestions().get(iD).getAnswer()[answers.indexOf(0)]);
         Button btn2 = (Button) findViewById(R.id.btn2);

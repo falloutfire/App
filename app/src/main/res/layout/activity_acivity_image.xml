@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/themeapp"
-    tools:context="com.example.igor.whowantwillbemillioner.QuestionActivity">
-
+    tools:context="com.example.igor.whowantwillbemillioner.AcivityImage"
+    android:background="@drawable/themeapp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,12 +23,19 @@
             <TextView
                 android:id="@+id/txt1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:textSize="30sp" />
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_centerHorizontal="true"
+          android:layout_marginStart="25dp"
+          android:layout_marginTop="100dp"
+          android:layout_marginBottom="10dp"/>
         </RelativeLayout>
 
         <LinearLayout
@@ -51,8 +58,6 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/questionrect"
-                    android:elevation="20dp"
-                    android:onClick="onStartClick"
                     android:text="@string/ans"
                     android:textSize="13sp" />
 
@@ -63,8 +68,6 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/questionrect"
-                    android:elevation="20dp"
-                    android:onClick="onStartClick"
                     android:text="@string/ans2"
                     android:textSize="13sp" />
             </LinearLayout>
@@ -84,8 +87,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/questionrect"
-                    android:elevation="20dp"
-                    android:onClick="onStartClick"
+
                     android:text="@string/ans3" />
 
                 <Button
@@ -95,11 +97,11 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/questionrect"
-                    android:elevation="20dp"
-                    android:onClick="onStartClick"
+
                     android:text="@string/ans4" />
 
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

@@ -41,7 +41,6 @@ public class MainMenuActivity extends AppCompatActivity {
         for (int i:numbers){
             Log.e("Array", String.valueOf(i));
         }
-
         Intent intent = new Intent(this, QuestionActivity.class);
         intent.putExtra("Questions", numbers);
         startActivity(intent);
