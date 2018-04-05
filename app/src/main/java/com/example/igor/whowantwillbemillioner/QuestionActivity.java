@@ -70,6 +70,7 @@ public class QuestionActivity extends AppCompatActivity {
         } else {
             button.setBackgroundResource(R.drawable.falseanswer);
             Intent intent = new Intent(this, LoseActivity.class);
+            intent.putExtra("index", index);
             startActivity(intent);
             overridePendingTransition(R.anim.animstart, R.anim.myanim);
             finish();

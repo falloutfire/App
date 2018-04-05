@@ -12,6 +12,9 @@ public class LoseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lose);
+        TextView textView = findViewById(R.id.CountTrueQuestion);
+        Intent intent = getIntent();
+        textView.setText("Правильные ответы:"+ intent.getIntExtra("index", 0));
     }
 
     public void onClickCloseTour(View view) {

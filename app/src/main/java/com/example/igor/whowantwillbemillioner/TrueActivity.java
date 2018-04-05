@@ -24,7 +24,7 @@ public class TrueActivity extends AppCompatActivity {
     public void Click(View view) {
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.buttonalpha);
         view.startAnimation(anim);
-        if (IND <= 10) {
+        if (IND <= 9) {
             Intent intent = new Intent(this, QuestionActivity.class);
             intent.putExtra("Numbers", check);
             intent.putExtra("index", IND + 1);
