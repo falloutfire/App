@@ -26,7 +26,7 @@ public class MainMenuActivity extends AppCompatActivity {
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.buttonalpha);
         view.startAnimation(anim);
         finish();
-        System.exit(0);
+       // System.exit(0);
     }
 
     public void onClickStart(View view) {
@@ -37,22 +37,31 @@ public class MainMenuActivity extends AppCompatActivity {
             numbers.add(i);
         }
         Collections.shuffle(numbers);
-
-        for (int i:numbers){
+        for (int i : numbers) {
             Log.e("Array", String.valueOf(i));
         }
-        Intent intent = new Intent(this, QuestionActivity.class);
-        intent.putExtra("Questions", numbers);
-        startActivity(intent);
-        overridePendingTransition(R.anim.animstart, R.anim.myanim);
-        finish();
-    }
+        int Id = numbers.get(0);
+        if (Id == Question.getQuestions().get(13).getId()) {
+            numbers.remove(0);
+            Intent intent = new Intent(this, AcivityImage.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.animstart, R.anim.myanim);
+            finish();
 
-    @Override
-    public void onBackPressed() {
-        //super.onBackPressed();
-        moveTaskToBack(true);
-        System.exit(0);
-        finish();
+        }
+            Intent intent = new Intent(this, QuestionActivity.class);
+            intent.putExtra("Questions", numbers);
+            startActivity(intent);
+            overridePendingTransition(R.anim.animstart, R.anim.myanim);
+            finish();
+
+
     }
-}
+        @Override
+        public void onBackPressed () {
+            //super.onBackPressed();
+            moveTaskToBack(true);
+            System.exit(0);
+            finish();
+        }
+    }

@@ -26,59 +26,68 @@ public class QuestionActivity extends AppCompatActivity {
         setContentView(R.layout.activityquestion);
         Intent intent = getIntent();
         if (intent.getIntegerArrayListExtra("Questions") == null) {
-            index = getIntent().getIntExtra("index", 0);
-            numbers = getIntent().getIntegerArrayListExtra("Numbers");
-            iD = numbers.get(index);
-        } else {
-            numbers = intent.getIntegerArrayListExtra("Questions");
-            iD = numbers.get(index);
-        }
-        ArrayList<Integer> answers = new ArrayList<>();
+        index = getIntent().getIntExtra("index", 0);
+        numbers = getIntent().getIntegerArrayListExtra("Numbers");
+        iD = numbers.get(index);
+    } else {
+        numbers = intent.getIntegerArrayListExtra("Questions");
+        iD = numbers.get(index);
+    }
+    ArrayList<Integer> answers = new ArrayList<>();
         answers.add(0);
         answers.add(1);
         answers.add(2);
         answers.add(3);
         Collections.shuffle(answers);
-        Button btn1 = (Button) findViewById(R.id.btn1);
+    Button btn1 = (Button) findViewById(R.id.btn1);
         btn1.setText(Question.getQuestions().get(iD).getAnswer()[answers.indexOf(0)]);
-        Button btn2 = (Button) findViewById(R.id.btn2);
+    Button btn2 = (Button) findViewById(R.id.btn2);
         btn2.setText(Question.getQuestions().get(iD).getAnswer()[answers.indexOf(2)]);
-        Button btn3 = (Button) findViewById(R.id.btn3);
+    Button btn3 = (Button) findViewById(R.id.btn3);
         btn3.setText(Question.getQuestions().get(iD).getAnswer()[answers.indexOf(3)]);
-        Button btn4 = (Button) findViewById(R.id.btn4);
+    Button btn4 = (Button) findViewById(R.id.btn4);
         btn4.setText(Question.getQuestions().get(iD).getAnswer()[answers.indexOf(1)]);
-        TextView txt1 = (TextView) findViewById(R.id.txt1);
+    TextView txt1 = (TextView) findViewById(R.id.txt1);
         txt1.setText(Question.getQuestions().get(iD).getQuestionText());
 
-    }
+}
 
     public void onStartClick(View v) {
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.buttonalpha);
         v.startAnimation(anim);
         Button button = (Button) v;
         String getAnswer = Question.getQuestions().get(iD).getAnswer()[Question.getQuestions().get(iD).getTrueAnswer()];
-        if (button.getText().toString().equals(getAnswer)) {
-            Intent intent = new Intent(this, TrueActivity.class);
-            intent.putExtra("Numbers", numbers);
-            intent.putExtra("index", index);
+        if (button.getText().toString().equals(getAnswer) && index==10) {
+            Intent intent = new Intent(this, VinAcivite.class);
             button.setBackgroundResource(R.drawable.trueanswer);
             startActivity(intent);
             overridePendingTransition(R.anim.animstart, R.anim.myanim);
             finish();
-        } else {
-            button.setBackgroundResource(R.drawable.falseanswer);
-            Intent intent = new Intent(this, LoseActivity.class);
+        }else  if (button.getText().toString().equals(getAnswer)){
+            Intent intent = new Intent(this, TrueActivity.class);
+            intent.putExtra("Numbers", numbers);
+            intent.putExtra("index", index);
+            intent.putExtra("IDI",iD);
+            button.setBackgroundResource(R.drawable.trueanswer);
             startActivity(intent);
             overridePendingTransition(R.anim.animstart, R.anim.myanim);
             finish();
         }
-    }
+        else {
+            button.setBackgroundResource(R.drawable.falseanswer);
+            Intent intent = new Intent(this, LoseActivity.class);
+            intent.putExtra("index", index);
+            startActivity(intent);
+            overridePendingTransition(R.anim.animstart, R.anim.myanim);
+            finish();
+        }}
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressed (){
         //super.onBackPressed();
         Intent intent = new Intent(this, MainMenuActivity.class);
         startActivity(intent);
         finish();
     }
-}
+
+    }

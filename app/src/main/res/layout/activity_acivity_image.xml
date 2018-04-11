@@ -18,23 +18,25 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:layout_margin="8dp"
-            android:background="@drawable/questionrect">
+            android:background="@drawable/buttonwindrect">
 
             <TextView
                 android:id="@+id/txt1"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:textSize="30sp" />
+                 android:textSize="20sp"/>
       <ImageView
+          android:src="@drawable/ansmargarita"
+          android:id="@+id/image"
           android:layout_width="match_parent"
-          android:layout_height="match_parent"
+          android:layout_height="wrap_content"
           android:layout_centerHorizontal="true"
-          android:layout_marginStart="25dp"
-          android:layout_marginTop="100dp"
+          android:layout_marginStart="70dp"
+          android:layout_marginTop="74dp"
           android:layout_marginBottom="10dp"/>
         </RelativeLayout>
 
@@ -52,22 +54,24 @@
                 android:orientation="vertical">
 
                 <Button
+                    android:onClick="onStartClick"
                     android:id="@+id/btn1"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/questionrect"
+                    android:background="@drawable/buttonwindrect"
                     android:text="@string/ans"
                     android:textSize="13sp" />
 
                 <Button
+                    android:onClick="onStartClick"
                     android:id="@+id/btn2"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/questionrect"
+                    android:background="@drawable/buttonwindrect"
                     android:text="@string/ans2"
                     android:textSize="13sp" />
             </LinearLayout>
@@ -81,23 +85,24 @@
                 android:orientation="vertical">
 
                 <Button
+                    android:onClick="onStartClick"
                     android:id="@+id/btn3"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/questionrect"
+                    android:background="@drawable/buttonwindrect"
 
                     android:text="@string/ans3" />
 
                 <Button
+                    android:onClick="onStartClick"
                     android:id="@+id/btn4"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/questionrect"
-
+                    android:background="@drawable/buttonwindrect"
                     android:text="@string/ans4" />
 
             </LinearLayout>

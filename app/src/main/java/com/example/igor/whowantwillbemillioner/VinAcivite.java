@@ -6,34 +6,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.TextView;
+import android.widget.Button;
 
-public class LoseActivity extends AppCompatActivity {
+public class VinAcivite extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lose);
-        TextView textView = findViewById(R.id.CountTrueQuestion);
-        Intent intent = getIntent();
-        textView.setText("Правильные ответы:"+ intent.getIntExtra("index", 0));
+        setContentView(R.layout.vinacivite);
     }
-
-    public void onClickCloseTour(View view) {
+    public void backtomenu(View v){
         Animation animation= AnimationUtils.loadAnimation(this,R.anim.buttonalpha);
-        view.startAnimation(animation);
-        Intent intent = new Intent(this, MainMenuActivity.class);
+        v.startAnimation(animation);
+        Intent intent=new Intent(this,MainMenuActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.animstart,R.anim.myanim);
         finish();
 
     }
-
     @Override
     public void onBackPressed() {
-        //super.onBackPressed();
+
         Intent intent = new Intent(this, MainMenuActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.animstart,R.anim.myanim);
         finish();
     }
 }

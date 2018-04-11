@@ -18,9 +18,11 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:layout_margin="8dp"
-            android:background="@drawable/questionrect">
+            android:background="@drawable/buttonwindrect">
 
             <TextView
+                android:text="Привет"
+                android:textColor="@color/darkblue"
                 android:id="@+id/txt1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -50,7 +52,7 @@
                     android:layout_height="80dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/questionrect"
+                    android:background="@drawable/buttonwindrect"
                     android:elevation="20dp"
                     android:onClick="onStartClick"
                     android:text="@string/ans"
@@ -62,7 +64,7 @@
                     android:layout_height="80dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/questionrect"
+                    android:background="@drawable/buttonwindrect"
                     android:elevation="20dp"
                     android:onClick="onStartClick"
                     android:text="@string/ans2"
@@ -83,7 +85,7 @@
                     android:layout_height="80dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/questionrect"
+                    android:background="@drawable/buttonwindrect"
                     android:elevation="20dp"
                     android:onClick="onStartClick"
                     android:text="@string/ans3" />
@@ -94,7 +96,7 @@
                     android:layout_height="80dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/questionrect"
+                    android:background="@drawable/buttonwindrect"
                     android:elevation="20dp"
                     android:onClick="onStartClick"
                     android:text="@string/ans4" />
