@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.TextView;
+
+import com.example.igor.whowantwillbemillioner.Entites.Question;
 
 import java.util.ArrayList;
 
@@ -19,6 +22,9 @@ public class TrueActivity extends AppCompatActivity {
         setContentView(R.layout.activitytrue);
         IND = getIntent().getIntExtra("index", 0);
         check = getIntent().getIntegerArrayListExtra("Numbers");
+        TextView textView = findViewById(R.id.Description);
+        String description = Question.getQuestions().get(check.get(IND)).getDescription();
+        textView.setText(description);
     }
 
     public void Click(View view) {
