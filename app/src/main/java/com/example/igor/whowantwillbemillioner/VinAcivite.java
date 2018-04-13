@@ -20,6 +20,7 @@ public class VinAcivite extends AppCompatActivity {
         v.startAnimation(animation);
         Intent intent=new Intent(this,MainMenuActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.animstart,R.anim.myanim);
         finish();
 
     }

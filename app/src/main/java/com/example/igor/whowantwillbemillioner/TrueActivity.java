@@ -1,8 +1,8 @@
 package com.example.igor.whowantwillbemillioner;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class TrueActivity extends AppCompatActivity {
     ArrayList<Integer> check;
     int IND;
-    int IDII;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,17 +22,19 @@ public class TrueActivity extends AppCompatActivity {
         setContentView(R.layout.activitytrue);
         IND = getIntent().getIntExtra("index", 0);
         check = getIntent().getIntegerArrayListExtra("Numbers");
-        IDII=getIntent().getIntExtra("IDI",0);
+
     }
 
     public void Click(View view) {
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.buttonalpha);
         view.startAnimation(anim);
-  if (IDII==Question.getQuestions().get(12).getId()) {
+        if (check.get(IND + 1) == Question.getQuestions().get(13).getId() || check.get(IND + 1) == Question.getQuestions().get(16).getId()) {
             Intent intent = new Intent(this, AcivityImage.class);
+            intent.putExtra("Numbers", check);
+            intent.putExtra("index", IND + 1);
             startActivity(intent);
             finish();
-        }else {
+        } else {
             Intent intent = new Intent(this, QuestionActivity.class);
             intent.putExtra("Numbers", check);
             intent.putExtra("index", IND + 1);
@@ -40,8 +42,8 @@ public class TrueActivity extends AppCompatActivity {
             finish();
 
 
-
-    }}
+        }
+    }
 
     @Override
     public void onBackPressed() {
@@ -50,5 +52,6 @@ public class TrueActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
 }
 

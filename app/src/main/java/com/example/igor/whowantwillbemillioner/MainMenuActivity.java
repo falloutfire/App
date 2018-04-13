@@ -1,8 +1,8 @@
 package com.example.igor.whowantwillbemillioner;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
@@ -26,7 +26,7 @@ public class MainMenuActivity extends AppCompatActivity {
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.buttonalpha);
         view.startAnimation(anim);
         finish();
-       // System.exit(0);
+        // System.exit(0);
     }
 
     public void onClickStart(View view) {
@@ -41,27 +41,24 @@ public class MainMenuActivity extends AppCompatActivity {
             Log.e("Array", String.valueOf(i));
         }
         int Id = numbers.get(0);
-        if (Id == Question.getQuestions().get(13).getId()) {
+        if (Id == Question.getQuestions().get(13).getId() || Id == Question.getQuestions().get(16).getId()) {
             numbers.remove(0);
-            Intent intent = new Intent(this, AcivityImage.class);
-            startActivity(intent);
-            overridePendingTransition(R.anim.animstart, R.anim.myanim);
-            finish();
-
         }
-            Intent intent = new Intent(this, QuestionActivity.class);
-            intent.putExtra("Questions", numbers);
-            startActivity(intent);
-            overridePendingTransition(R.anim.animstart, R.anim.myanim);
-            finish();
+
+        Intent intent = new Intent(this, QuestionActivity.class);
+        intent.putExtra("Questions", numbers);
+        startActivity(intent);
+        overridePendingTransition(R.anim.animstart, R.anim.myanim);
+        finish();
 
 
     }
-        @Override
-        public void onBackPressed () {
-            //super.onBackPressed();
-            moveTaskToBack(true);
-            System.exit(0);
-            finish();
-        }
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        moveTaskToBack(true);
+        System.exit(0);
+        finish();
     }
+}
