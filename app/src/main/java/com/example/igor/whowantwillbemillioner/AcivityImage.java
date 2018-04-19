@@ -50,15 +50,7 @@ public class AcivityImage extends AppCompatActivity {
         v.startAnimation(anim);
         Button button = (Button) v;
         String getAnswer = Question.getQuestions().get(numbers.get(index)).getAnswer()[Question.getQuestions().get(numbers.get(index)).getTrueAnswer()];
-
-        if (button.getText().toString().equals(getAnswer) && index == 10) {
-            Intent intent = new Intent(this, VinAcivite.class);
-            button.setBackgroundResource(R.drawable.trueanswer);
-            startActivity(intent);
-            overridePendingTransition(R.anim.animstart, R.anim.myanim);
-            finish();
-
-        } else if (button.getText().toString().equals(getAnswer)) {
+        if (button.getText().toString().equals(getAnswer)) {
             Intent intent = new Intent(this, TrueActivity.class);
             button.setBackgroundResource(R.drawable.trueanswer);
             intent.putExtra("Numbers", numbers);
@@ -74,5 +66,13 @@ public class AcivityImage extends AppCompatActivity {
             overridePendingTransition(R.anim.animstart, R.anim.myanim);
             finish();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        Intent intent = new Intent(this, MainMenuActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

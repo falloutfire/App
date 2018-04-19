@@ -17,12 +17,11 @@
             android:id="@+id/relative"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_margin="8dp"
+            android:layout_weight="1"
             android:background="@drawable/buttonwindrect">
 
             <TextView
-                android:text="Привет"
                 android:id="@+id/txt1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -30,7 +29,8 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:textSize="30sp" />
+                android:text="Привет"
+                android:textSize="25sp" />
         </RelativeLayout>
 
         <LinearLayout
@@ -55,8 +55,7 @@
                     android:background="@drawable/buttonwindrect"
                     android:elevation="20dp"
                     android:onClick="onStartClick"
-                    android:text="@string/ans"
-                    />
+                    android:text="@string/ans" />
 
                 <Button
                     android:id="@+id/btn2"
@@ -67,8 +66,7 @@
                     android:background="@drawable/buttonwindrect"
                     android:elevation="20dp"
                     android:onClick="onStartClick"
-                    android:text="@string/ans2"
-                     />
+                    android:text="@string/ans2" />
             </LinearLayout>
 
             <LinearLayout

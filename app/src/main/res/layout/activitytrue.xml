@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,33 +12,42 @@
         android:orientation="vertical"
         android:weightSum="5">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4"
             android:layout_margin="20dp"
+            android:layout_weight="4"
             android:background="@drawable/questionrect"
-            >
+            android:orientation="vertical">
+
 
             <TextView
                 android:textColor="@color/fortext"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:text="@string/yra"
-                android:textSize="30sp" />
-
-
-        </RelativeLayout>
+                android:textSize="30sp"
+                android:id="@+id/trueAns"/>
+            <TextView
+                android:textColor="@color/fortext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Description"
+                android:text="Дополнительная информация:"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btn0"

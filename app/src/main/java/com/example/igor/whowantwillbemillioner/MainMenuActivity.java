@@ -40,18 +40,21 @@ public class MainMenuActivity extends AppCompatActivity {
         for (int i : numbers) {
             Log.e("Array", String.valueOf(i));
         }
-        int Id = numbers.get(0);
-        if (Id == Question.getQuestions().get(13).getId() || Id == Question.getQuestions().get(16).getId()) {
-            numbers.remove(0);
+        if (Question.getQuestions().get(numbers.get(0)).getIdphoto()!=0) {
+            Intent intent = new Intent(this, AcivityImage.class);
+            intent.putExtra("Numbers", numbers);
+            intent.putExtra("index", 0);
+            startActivity(intent);
+            overridePendingTransition(R.anim.animstart, R.anim.myanim);
+            finish();
+        } else {
+            Intent intent = new Intent(this, QuestionActivity.class);
+            intent.putExtra("Questions", numbers);
+            startActivity(intent);
+            overridePendingTransition(R.anim.animstart, R.anim.myanim);
+            finish();
+
         }
-
-        Intent intent = new Intent(this, QuestionActivity.class);
-        intent.putExtra("Questions", numbers);
-        startActivity(intent);
-        overridePendingTransition(R.anim.animstart, R.anim.myanim);
-        finish();
-
-
     }
 
     @Override

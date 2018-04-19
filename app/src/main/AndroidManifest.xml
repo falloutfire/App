@@ -20,7 +20,6 @@
         </activity>
         <activity android:name=".LoseActivity" />
         <activity android:name=".AcivityImage" />
-        <activity android:name=".VinAcivite"></activity>
     </application>
 
 </manifest>

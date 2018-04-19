@@ -57,13 +57,7 @@ public class QuestionActivity extends AppCompatActivity {
         v.startAnimation(anim);
         Button button = (Button) v;
         String getAnswer = Question.getQuestions().get(iD).getAnswer()[Question.getQuestions().get(iD).getTrueAnswer()];
-        if (button.getText().toString().equals(getAnswer) && index == 10) {
-            Intent intent = new Intent(this, VinAcivite.class);
-            button.setBackgroundResource(R.drawable.trueanswer);
-            startActivity(intent);
-            overridePendingTransition(R.anim.animstart, R.anim.myanim);
-            finish();
-        } else if (button.getText().toString().equals(getAnswer)) {
+        if (button.getText().toString().equals(getAnswer)) {
             Intent intent = new Intent(this, TrueActivity.class);
             intent.putExtra("Numbers", numbers);
             intent.putExtra("index", index);
