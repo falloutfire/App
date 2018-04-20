@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".LoseActivity" />
         <activity android:name=".AcivityImage" />
+        <activity android:name=".ActivityDevelopers"></activity>
     </application>
 
 </manifest>

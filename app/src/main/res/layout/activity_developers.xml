@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/themeapp"
+    tools:context="com.example.igor.whowantwillbemillioner.Entites.Develop">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:background="@drawable/buttonwindrect">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text=" Руководитель: \n Илья Лихачев \n\nРазработчики: \n Бельский Игорь \n Анна Бaйкова \n Александр Середа \n Владик Бирюков \n Борис Верзун"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

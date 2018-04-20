@@ -56,6 +56,14 @@ public class MainMenuActivity extends AppCompatActivity {
 
         }
     }
+    public void Developers(View view){
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.buttonalpha);
+        view.startAnimation(anim);
+        Intent intent=new Intent(this,ActivityDevelopers.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.animstart,R.anim.myanim);
+        finish();
+    }
 
     @Override
     public void onBackPressed() {

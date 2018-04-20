@@ -19,4 +19,7 @@
     <color name="darkblue">#0000FF</color>
     <color name="black">#000000</color>
     <color name="fortext">#F7F6C5</color>
+    <string name="play">Играть</string>
+    <string name="develop">Разработчики</string>
+    <string name="exit">Выход</string>
 </resources>
