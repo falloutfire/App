@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text=" Руководитель: \n Илья Лихачев \n\nРазработчики: \n Бельский Игорь \n Анна Бaйкова \n Александр Середа \n Владик Бирюков \n Борис Верзун"
+            android:text=" Руководитель: \n Илья Лихачев \n\nРазработчики: \n Бельский Игорь \n Анна Бaйкова \n Александр Середа \n Влад Бирюков \n Борис Верзун"
             android:textColor="@color/black"
             android:textSize="25sp" />
     </RelativeLayout>
