@@ -1,9 +1,11 @@
 package com.example.igor.whowantwillbemillioner;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 public class LoseActivity extends AppCompatActivity {
@@ -14,13 +16,15 @@ public class LoseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_lose);
         TextView textView = findViewById(R.id.CountTrueQuestion);
         Intent intent = getIntent();
-        textView.setText("Правильные ответы:"+ intent.getIntExtra("index", 0));
+        textView.setText("Правильные ответы:" + intent.getIntExtra("index", 0));
     }
 
     public void onClickCloseTour(View view) {
-
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.buttonalpha);
+        view.startAnimation(animation);
         Intent intent = new Intent(this, MainMenuActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.animstart, R.anim.myanim);
         finish();
 
     }

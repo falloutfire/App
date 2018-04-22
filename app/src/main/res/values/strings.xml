@@ -9,11 +9,17 @@
     <string name="ans2">Answer2</string>
     <string name="ans3">Answer3</string>
     <string name="ans4">Answer4</string>
-    <string name="yra">Вы ответили правильно!</string>
+    <string name="yra">Вы ответили правильно!\n</string>
     <string name="next">Следующий вопрос</string>
     <string name="lose">Вы ответили неправильно!</string>
     <string name="backMenu">Вернутсья в главное меню</string>
     <color name="grey">#d3d3d3</color>
     <color name="forTextV">#AFEEEE</color>
-
+    <string name="vin">Победа!\n Вы ответели правильно на все вопросы</string>
+    <color name="darkblue">#0000FF</color>
+    <color name="black">#000000</color>
+    <color name="fortext">#F7F6C5</color>
+    <string name="play">Играть</string>
+    <string name="develop">Разработчики</string>
+    <string name="exit">Выход</string>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,58 +15,84 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="2">
+
+            <ImageView
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/logocod"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="5dp" />
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="50dp"
                 android:src="@drawable/viktorina" />
 
+            <ImageView
+                android:src="@drawable/logoschool"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="5dp" />
         </RelativeLayout>
 
         <LinearLayout
+            android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:orientation="horizontal">
+            android:layout_weight="3"
+            android:orientation="vertical">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:orientation="vertical">
 
+
                 <Button
+                    android:layout_weight="1"
                     android:id="@+id/startButton"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:layout_marginEnd="80dp"
                     android:layout_marginStart="80dp"
-                    android:background="@drawable/questionrect"
+                    android:background="@drawable/buttonwindrect"
                     android:onClick="onClickStart"
-                    android:text="Играть" />
+                    android:text="@string/play" />
 
                 <Button
+                    android:onClick="Developers"
+                    android:layout_weight="1"
+                    android:id="@+id/developers"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="80dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/buttonwindrect"
+                    android:text="@string/develop" />
+
+                <Button
+                    android:layout_weight="1"
                     android:id="@+id/exitButton"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginEnd="80dp"
                     android:layout_marginStart="80dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/questionrect"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/buttonwindrect"
                     android:onClick="onClickExit"
-                    android:text="Выход" />
-
+                    android:text="@string/exit" />
 
             </LinearLayout>
-
-
         </LinearLayout>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
+

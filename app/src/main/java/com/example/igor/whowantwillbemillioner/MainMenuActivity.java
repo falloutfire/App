@@ -1,8 +1,8 @@
 package com.example.igor.whowantwillbemillioner;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
@@ -26,7 +26,7 @@ public class MainMenuActivity extends AppCompatActivity {
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.buttonalpha);
         view.startAnimation(anim);
         finish();
-        System.exit(0);
+        // System.exit(0);
     }
 
     public void onClickStart(View view) {
@@ -37,15 +37,31 @@ public class MainMenuActivity extends AppCompatActivity {
             numbers.add(i);
         }
         Collections.shuffle(numbers);
-
-        for (int i:numbers){
+        for (int i : numbers) {
             Log.e("Array", String.valueOf(i));
         }
+        if (Question.getQuestions().get(numbers.get(0)).getIdphoto()!=0) {
+            Intent intent = new Intent(this, AcivityImage.class);
+            intent.putExtra("Numbers", numbers);
+            intent.putExtra("index", 0);
+            startActivity(intent);
+            overridePendingTransition(R.anim.animstart, R.anim.myanim);
+            finish();
+        } else {
+            Intent intent = new Intent(this, QuestionActivity.class);
+            intent.putExtra("Questions", numbers);
+            startActivity(intent);
+            overridePendingTransition(R.anim.animstart, R.anim.myanim);
+            finish();
 
-        Intent intent = new Intent(this, QuestionActivity.class);
-        intent.putExtra("Questions", numbers);
+        }
+    }
+    public void Developers(View view){
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.buttonalpha);
+        view.startAnimation(anim);
+        Intent intent=new Intent(this,ActivityDevelopers.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.animstart, R.anim.myanim);
+        overridePendingTransition(R.anim.animstart,R.anim.myanim);
         finish();
     }
 
